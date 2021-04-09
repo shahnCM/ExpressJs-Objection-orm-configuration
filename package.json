@@ -1,0 +1,26 @@
+{
+  "name": "test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "local": "nodemon server.js localhost 3456",
+    "migU": "npx knex migrate:latest --knexfile ./database/knexfile.js",
+    "migD": "npx knex migrate:rollback --knexfile ./database/knexfile.js",
+    "seed-make": "npx knex seed:make dev --knexfile ./database/knexfile.js",
+    "seed-run": "npx knex seed:run --knexfile ./database/knexfile.js"
+
+  },
+  "author": "Mahir",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "knex": "^0.95.4",
+    "mysql2": "^2.2.5",
+    "objection": "^2.2.15"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
